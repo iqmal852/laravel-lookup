@@ -1,0 +1,54 @@
+{
+    "name": "iqmal/laravel-lookup",
+    "description": "Just a simple Laravel Lookup table and Model",
+    "keywords": [
+        "iqmal",
+        "laravel-lookup"
+    ],
+    "homepage": "https://github.com/iqmal/laravel-lookup",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Muhammad Iqmal",
+            "email": "iqmal@docker.my",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iqmal\\LaravelLookup\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Iqmal\\LaravelLookup\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iqmal\\LaravelLookup\\LaravelLookupServiceProvider"
+            ],
+            "aliases": {
+                "LaravelLookup": "Iqmal\\LaravelLookup\\LaravelLookupFacade"
+            }
+        }
+    }
+}
